@@ -1,0 +1,11 @@
+{
+  "name": "QR Instant generator",
+  "version": "1.0",
+  "description": "Generate a QR code of the page you are visiting",
+  "icons": { "48": "icon.png" },
+  "browser_action": {
+    "default_icon": "button.png",
+    "popup": "popup.html"
+  },
+  "permissions": [ "tabs" ]
+}

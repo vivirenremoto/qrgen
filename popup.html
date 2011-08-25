@@ -1,0 +1,6 @@
+<script>
+chrome.tabs.getSelected( null, function( tab ){
+	var url = 'https://chart.googleapis.com/chart?chs=150x150&cht=qr&choe=UTF-8&chl=' + encodeURIComponent( tab.url );
+    document.write( '<a href="' + url + '" target="_blank"><img src="' + url + '"/></a>' );
+});
+</script>

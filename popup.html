@@ -1,6 +1,9 @@
 <script>
 chrome.tabs.getSelected( null, function( tab ){
-	var url = 'https://chart.googleapis.com/chart?chs=150x150&cht=qr&choe=UTF-8&chl=' + encodeURIComponent( tab.url );
-    document.write( '<a href="' + url + '" target="_blank"><img src="' + url + '"/></a>' );
+	var url = 'https://chart.googleapis.com/chart?chs=150x150&cht=qr&choe=UTF-8&chl=' + encodeURI( tab.url );
+	html = '<a href="' + tab.url + '" target="_blank"><img src="' + url + '"/></a>';
+    document.write( html );
+    document.write( '<br/><br/><input id="url" readonly="readonly" style="width:100%" onclick="this.select()"/>' );
+    document.getElementById('url').value = html;
 });
 </script>
